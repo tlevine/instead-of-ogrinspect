@@ -21,9 +21,6 @@ class XML(type):
 
         class Parish(models.Model, metaclass = XML):
             source = os.path.join(os.path.dirname(__name__), 'parishes_USGS_1998.shp.xml')
-
-    Hopefully unnecessary...
-    http://davidwilson.me/2013/09/30/Colorado-Geology-GeoDjango-Tutorial/
     '''
     def __new__(cls, name, bases, namespace):
         if 'source' not in namespace:
